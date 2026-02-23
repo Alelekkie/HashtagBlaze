@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hashtag App</title>
+
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    margin: 0;
+    padding: 20px;
+}
+
+/* GRID */
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* domyślnie 2 kolumny */
+    gap: 15px;
+}
+
+/* Na komputerze 4 kolumny */
+@media (min-width: 900px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.box {
+    background: #222;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.2s;
+}
+
+.box:hover {
+    background: #444;
+    transform: scale(1.05);
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="box" data-tags="#spacer #spacerdolasu #nature" onclick="copyTags(this)">SQUIRT</div>
+    <div class="box" data-tags="#trening #silownia #motywacja" onclick="copyTags(this)">ANAL</div>
+    <div class="box" data-tags="#kawa #relaks #morning" onclick="copyTags(this)">THREESOME</div>
+    <div class="box" data-tags="#biznes #praca #hustle" onclick="copyTags(this)">DUPKA</div>
+    <div class="box" data-tags="#wakacje #travel #sun" onclick="copyTags(this)">SESOWNE ZDJĘCIE</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">ZABAWA WIBRATOREM / DILDO</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">SEX W CIPKĘ</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">TWERK</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">WYTRYSK</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">ZABAWA WIBRATOREM / DILDO</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">ZABAWA WIBRATOREM / DILDO</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">ZABAWA WIBRATOREM / DILDO</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">ZABAWA WIBRATOREM / DILDO</div>
+    <div class="box" data-tags="#film #kamera #nagrywanie" onclick="copyTags(this)">ZABAWA WIBRATOREM / DILDO</div>
+</div>
+
+<script>
+function copyTags(element) {
+    const tags = element.getAttribute("data-tags");
+    navigator.clipboard.writeText(tags).then(() => {
+        alert("Skopiowano hashtagi!");
+    });
+}
+</script>
+
+</body>
+</html>
